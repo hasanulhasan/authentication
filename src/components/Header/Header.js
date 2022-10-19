@@ -5,9 +5,10 @@ const Header = () => {
   return (
     <div>
       <div className="navbar bg-base-300">
-        <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
-        <Link to='/login'>Login</Link>
-        <Link to='/register'>Register</Link>
+        <Link className="btn btn-ghost normal-case text-xl" to='/'>AuthenTic Pagla</Link>
+        <Link className="btn btn-ghost normal-case text-xl" to='/login'>Login</Link>
+        <Link className="btn btn-ghost normal-case text-xl" to='/'>Home</Link>
+        <Link className="btn btn-ghost normal-case text-xl" to='/register'>Register</Link>
       </div>
     </div>
   );
