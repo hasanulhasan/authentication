@@ -1,11 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AuthContext } from '../../Context/UserContext';
 
 const Login = () => {
+  const { signIn } = useContext(AuthContext);
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
+
+    signIn(email, password)
+      .then(result => {
+        const user = result.user;
+        console.log('log in', user)
+      })
+      .catch(error => {
+        console.error(error);
+      })
+
+
   }
   return (
     <div>
